@@ -20,8 +20,7 @@ const userSignIn = async (email, password) => {
         return { responseUser, token }
 
     } catch (error) {
-        console.error('Error signing in:', error);
-        throw new Error('Internal server error');
+        throw new Error(error);
     }
 }
 

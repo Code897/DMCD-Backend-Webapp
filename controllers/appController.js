@@ -36,10 +36,10 @@ export async function signIn(req, res) {
     try {
         const { responseUser, token } = await userSignIn(email, password);
         res.status(200).json({ responseUser, token });
-        //
     } catch (error) {
-        console.error(error);
-    }
+        console.log(error.message);
+        res.status(401).json({error: error.message})
+    } 
 }
 
 export async function getUser(req, res) {
@@ -65,7 +65,7 @@ export async function updateUser(req, res) {
         const user = await updateUserDB(userid, body)
         res.status(200).json(user);
     } catch (error) {
-        return res.status(404).send({ error: "No " })
+        return res.status(404).send({ error: "Update Failed" })
     }
 }
 export async function generateOTP(req, res) {
