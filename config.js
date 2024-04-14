@@ -11,4 +11,4 @@ export const IMGUR_REFRESH_TOKEN = process.env.imgur_REFRESH_TOKEN;
 export const MONGO_ATLAS_PASSWORD = process.env.mongo_Atlas_Password;
 export const PORT = process.env.PORT;
 export const WHATSAPP_TOKEN = process.env.whatsapp_TOKEN;
-export const MONGO_CONNECTION_STRING = process.env.mongo_connection_string
+export const MONGO_CONNECTION_STRING = process.env.mongo_Connection_String
